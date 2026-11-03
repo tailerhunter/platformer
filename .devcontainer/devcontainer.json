@@ -1,0 +1,26 @@
+{
+  "name": "Platformer",
+  "image": "mcr.microsoft.com/devcontainers/python:3",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": { "label": "Game", "onAutoForward": "openPreview" }
+  },
+  "postAttachCommand": {
+    "game": "python3 -m http.server 8000"
+  },
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["README.md", "student/levels.js"]
+    },
+    "vscode": {
+      "settings": {
+        "files.autoSave": "afterDelay",
+        "files.autoSaveDelay": 500,
+        "editor.fontSize": 15,
+        "editor.wordWrap": "off",
+        "editor.minimap.enabled": false,
+        "workbench.startupEditor": "none"
+      }
+    }
+  }
+}

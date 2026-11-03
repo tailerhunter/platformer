@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Platformer</title>
+<link rel="stylesheet" href="engine/style.css">
+</head>
+<body>
+<main id="shell">
+  <canvas id="screen" width="960" height="540" tabindex="0" aria-label="Game"></canvas>
+  <div id="overlay" hidden></div>
+  <aside id="panel" hidden></aside>
+</main>
+<p id="help">
+  <kbd>←</kbd><kbd>→</kbd> or <kbd>A</kbd><kbd>D</kbd> move &middot;
+  <kbd>Space</kbd>/<kbd>W</kbd>/<kbd>↑</kbd> jump &middot;
+  <kbd>R</kbd> restart level &middot; <kbd>N</kbd> next level &middot;
+  <kbd>T</kbd> tuning panel &middot; <kbd>H</kbd> hitboxes &middot; <kbd>M</kbd> mute
+</p>
+
+<script>
+  // The files that make up the game, loaded in this order.
+  // Each one is fetched fresh (the ?v=... part) so the browser never shows
+  // you an old saved copy after you edit a file.
+  const FILES = [
+    "engine/errors.js",      // 1. friendly error messages, so it loads first
+
+    "student/tuning.js",     // 2. YOUR FILES: the only four you need to edit
+    "student/levels.js",
+    "student/entities.js",
+    "student/theme.js",
+
+    "engine/spec.js",        // 3. the engine: nothing below needs changing
+    "engine/input.js",
+    "engine/sfx.js",
+    "engine/world.js",
+    "engine/actors.js",
+    "engine/render.js",
+    "engine/panel.js",
+    "engine/validate.js",
+    "engine/game.js",
+  ];
+  const fresh = location.protocol.startsWith("http") ? "?v=" + Date.now() : "";
+  for (const f of FILES) document.write('<script src="' + f + fresh + '"><\/script>');
+</script>
+</body>
+</html>
