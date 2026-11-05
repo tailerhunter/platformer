@@ -25,7 +25,7 @@ const TUNING = {
      Assignment: Part 2, Hole 1.                                           */
 
   // How fast you fall. Bigger = heavier.          try 900 (moon) to 3500 (rock)
-  GRAVITY: 1800,
+  GRAVITY: 1300,
 
 
   
