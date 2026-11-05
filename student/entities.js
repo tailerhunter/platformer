@@ -72,16 +72,16 @@ const ENEMY_TYPES = {
     hopEvery: 1.4,
   },
 
-  hunter: {
+  sentry: {
     movement: "chase",
-    speed: 85,
+    speed: 50,
     width: 22,
-    height: 22,
+    height: 26,
     color: "#32c7a5",
-    stompable: true,
-    points: 250,
+    stompable: false,
+    points: 0,
     turnsAtLedges: true,
-    sightRange: 180,
+    sightRange: 160,
   },
 
 };
@@ -143,9 +143,9 @@ const PICKUP_TYPES = {
 
   heart: {
     color: "#ff3366",
-    size: 16,
+    size: 14,
     shape: "circle",
-    points: 100,
+    points: 0,
     treasure: false,
     power: { life: 1 },
   },
@@ -171,11 +171,11 @@ const LEGEND = {
   "*": { kind: "pickup", name: "gem" },
   "b": { kind: "pickup", name: "boots" },
   "f": { kind: "pickup", name: "feather" },
-  "L": { kind: "pickup", name: "heart" },
+  "h": { kind: "pickup", name: "heart" },
 
   "E": { kind: "enemy",  name: "walker" },
   "F": { kind: "enemy",  name: "flyer" },
   "H": { kind: "enemy",  name: "hopper" },
-  "S": { kind: "enemy",  name: "hunter" },
+  "S": { kind: "enemy",  name: "sentry" },
 
 };
